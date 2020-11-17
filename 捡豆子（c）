@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main( )
+{
+    int a,b,c,d,e,f,g;
+    g=0;
+    scanf( "%d%d%d%d%d%d",&a,&b,&c,&d,&e,&f);
+    if(a>b ) {
+
+        if( c>d)
+            g = a + c;
+        else
+
+            g = a + d;
+    }
+    else
+
+    {   if( e>f)
+            g=b+e;
+        else
+            g=b+f;
+    }
+    printf( "%d",g);
+    return 0;
+}
