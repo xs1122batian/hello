@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main( )
+{ 
+int a;
+scanf( "%d",&a);
+if( a==10000)
+{ printf( "You win a house.\n");
+printf( "You win a car.\n");}
+else if( a>=9000&&a<10000)
+{ printf( "You win a computer.\n");
+printf( "You win a bicycle.\n");}
+else if(a<9000 )
+printf( "Sorry,you get nothing."); 
+return 0;
+}
