@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main( )
+{ 
+int a,b;
+a=0;
+scanf( "%d",&b);
+while( b>0)
+{ a++;
+b=b/10;}
+printf( "%d",a);
+return 0;
+}
