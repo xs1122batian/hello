@@ -1,0 +1,9 @@
+#include<stdio.h>
+int main( )
+{ 
+int a=3;
+double height;
+height=5.0*a*a;
+printf( "height=%.2f",height);
+return 0;
+}
