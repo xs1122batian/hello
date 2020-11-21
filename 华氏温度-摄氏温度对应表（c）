@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main( )
+{ 
+int lower,upper;
+double a;
+scanf( "%d%d",&lower,&upper);
+if( lower<=upper&&upper<=100){ 
+printf( "fahr celsius\n");
+for( ;lower<=upper;lower=lower+2)
+{ a=5.0*(lower-32)/9.0;
+printf( "%d",lower);
+printf( "%6.1f\n",a);}}
+else
+printf( "Invalid.");
+return 0;
+}
