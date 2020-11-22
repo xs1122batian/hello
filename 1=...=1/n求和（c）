@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main( )
+{ 
+int a;
+double b,c;
+scanf( "%d",&a);
+b=0;
+for(c=1; c<=a;c++)
+{ b=b+1/c;
+}
+printf( "sum=%.6f",b);
+return 0;
+}
