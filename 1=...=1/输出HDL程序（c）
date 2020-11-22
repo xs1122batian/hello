@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main( )
+{ 
+int b,i;
+for( i=0,b=16;i<b;i++)
+{ printf( "Mux(a=a[%d],b=b[%d],sel=sel[0],out=ab%d);\n",i,i,i);
+printf( "Mux(a=c[%d],b=d[%d],sel=sel[0],out=cd%d);\n",i,i,i);
+printf( "Mux(a=ab%d,b=cd%d,sel=sel[1],out=out[%d]);\n",i,i,i);
+}
+return 0;
+}
