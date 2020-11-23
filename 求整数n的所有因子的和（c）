@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main( )
+{ 
+int a,n,b,c,d;
+scanf( "%d",&n);
+for( a=2;a<n;a++)
+{b=n%a;
+c=n/a;
+if(b==0 ) 
+d=d+c;
+else if( b==0&&c==a)
+d=d+c+c;}
+printf( "%d",d);
+return 0;
+}
