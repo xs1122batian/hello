@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main( )
+{ 
+int a,b,c;
+c=1;
+scanf( "%d%d",&a,&b);
+while( c!=0)
+{ if( a>=b){ 
+c=a-b;}
+else if( a<b){ 
+c=b-a;}
+b=a;
+a=c;
+}
+printf( "%d",b);
+return 0;
+}
