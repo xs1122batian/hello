@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main( )
+{ 
+int a,b,c,d,n;
+scanf( "%d",&n);
+for( a=1;a<n;a++)
+{ b=n*a;
+for( c=1;c<n;c++)
+{ d=c*c;
+if( b==d)
+goto GG;
+}}
+GG:
+printf( "%d",a);
+return 0;
+}
