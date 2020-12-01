@@ -1,0 +1,20 @@
+#include<stdio.h
+int sum(int n)
+{
+  int a,b;
+  a=1;
+  b=0;
+  for(a=1;a<=n;a++)
+  {
+      b=b+a*a;
+  }
+  return b;
+}
+
+int main(void)
+{
+   int n;
+   scanf("%d", &n);
+   printf("%d\n", sum(n));
+   return 0;
+}
