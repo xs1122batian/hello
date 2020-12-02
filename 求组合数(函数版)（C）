@@ -1,0 +1,30 @@
+#include <stdio.h>
+int C(int n,int k)
+{
+    int a,b,c,d,e,f,g;
+    for(a=1,b=1;a<=n;a++)
+        b=a*b;
+    for(c=1,d=1;c<=k;c++)
+        d=c*d;
+    for(e=1,f=1;e<=(n-k);e++)
+        f=e*f;
+        g=b/(d*f);
+        return g;
+
+}
+int fac(int n)
+{
+    int a,b;
+    for(a=1,b=1;a<=n;a++)
+        b=a*b;
+    return b;
+}
+int main()
+{
+   int n, k;   
+ 
+   while(scanf("%d%d", &n, &k) != EOF) {
+      printf("%d\n", C(n, k));
+   }
+   return 0;
+}
