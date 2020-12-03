@@ -1,0 +1,14 @@
+int CountDigit( int number, int digit )
+{
+    int a,b;
+    a=0;
+    do
+    {if(number<0)
+    number=-number;
+        b=number%10;
+        if(b==digit)
+            a++;
+        number=number/10;
+    }while(number);
+    return a;
+}
