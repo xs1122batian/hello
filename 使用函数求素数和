@@ -1,0 +1,28 @@
+int prime( int p )
+{
+    int a,b,c;
+    b=1;
+    if(p<=1)
+        b=0;
+        else
+    for(a=2;a<=sqrt(p);a++)
+    {
+       c=p%a;
+        if(c==0)
+        {b=0;
+        break;}
+    }
+    return b;
+}
+int PrimeSum( int m, int n )
+{
+    int a,b;
+    b=0;
+    for(m;m<=n;m++)
+    {
+      a=prime(m);
+      if(a==1)
+          b=b+m;
+    }
+    return b;
+}
