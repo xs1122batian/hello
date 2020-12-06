@@ -1,0 +1,35 @@
+#include<stdio.h>
+int sbsss( int a)
+{ 
+int c,b,d;
+d=1;
+for( b=2;b<=a/2;b++)
+{c=a%b;
+if( c==0)
+{d=0;
+
+break;}}
+if( d==0)
+return 0;
+return 1;
+}
+void ssfj( int a)
+{
+int b,c,d,e,f;
+f=0;
+for( b=2;b<=a/2;b++)
+{ c=a-b;
+d=sbsss( b);
+e=sbsss( c);
+if( d==1&&e==1)
+{printf( "%d=%d+%d\n",a,b,c);
+f++;}}
+if( f==0)
+printf( "No answer");
+}
+int main( )
+{
+int a;
+while( scanf( "%d",&a)&&( a>=4))
+ssfj( a);
+return 0;}
