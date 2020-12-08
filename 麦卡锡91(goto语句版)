@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main( )
+{ 
+int a,n;
+while(scanf( "%d",&n)!=EOF)
+{
+GG:
+if( n>100)
+{ a=n-10;}
+else
+{YY:
+n=n+11;
+if( n>100)
+{n=n-10;
+goto GG;}
+else
+{goto YY; }}
+printf( "%d\n",a);}
+return 0;
+}
