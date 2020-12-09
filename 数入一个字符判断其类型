@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+    char m;
+    m=getchar();
+    if(m>='0'&&m<='9')
+        printf("digital character");
+    else if((m>='a'&&m<='z')||(m>='A'&&m<='Z'))
+        printf("alphabetic character");
+    else
+        printf("other character");
+    return 0;
+}
