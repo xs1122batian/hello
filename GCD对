@@ -1,0 +1,33 @@
+#include<stdio.h>
+long long int gcd(long long int a,long long int b)
+{
+    long long int c;
+    while(b)
+        {c=a%b;
+        a=b;
+        b=c;}
+        return a;
+}
+int main()
+{
+    long long int a,b,c,d,x1,x2,y1,y2,e,f,g,h;
+    h=0;
+    long long int DB1[2000]={0},DB2[2000]={0};
+    scanf("%lld%lld%lld%lld",&a,&b,&c,&d);
+    for(x1=a;x1<b;x1++)
+        for(y1=x1+1;y1<=b;y1++)
+    {
+        e=gcd(x1,y1);
+        DB1[e]++;
+    }
+    for(x2=c;x2<d;x2++)
+        for(y2=x2+1;y2<=d;y2++)
+    {
+        f=gcd(x2,y2);
+        DB2[f]++;
+    }
+    for(g=0;g<2000;g++)
+    h=h+DB1[g]*DB2[g];
+    printf("%lld",h);
+    return 0;
+}
