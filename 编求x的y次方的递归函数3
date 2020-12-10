@@ -1,0 +1,30 @@
+#include<stdio.h>
+ double getpower(int x, int y)
+{
+    double z;
+    z=1.0;
+    if(y==1)
+        {z*=x;
+        return z;}
+        else if(y==0)
+            {z*=1;
+            return z;}
+    else if(y>1)
+    {z=x*getpower(x,y-1);
+        return z;}
+    if(y<0)
+       {y=-y;
+    z=x*getpower(x,y-1);
+    return 1/z;}
+}
+int main()
+{
+    int x,y;
+    double a;
+  while(scanf("%d,%d",&x,&y)&&x!=0)
+     {
+         a=getpower(x,y);
+         printf("%f\n",a);
+     }
+      return 0;
+}
