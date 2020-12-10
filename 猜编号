@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+    int a,b,c,d,n,sum;
+    c=0;
+    scanf("%d%d",&n,&a);
+    for(b=1;b<=n;b++)
+        c=c+b;
+        sum=c-a;
+     for(d=1;d<=n;d++)
+     {if((2*d+1)==sum)
+     printf("%d %d",d,d+1);}
+     return 0;
+}
