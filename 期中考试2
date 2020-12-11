@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+ 
+int main()
+{
+    int a,b,c,d,e,f,n;
+    e=0;
+    f=0;
+    scanf("%d",&n);
+    for(a=0;a<n;a++)
+    {
+        scanf("%d %d %d",&b,&c,&d);
+        if(b>c)
+            e=e+d;
+            if(b<c)
+                f=f+d;
+    }
+    if(e>f)
+        printf("chuanpu\n");
+    else
+        printf("baideng\n");
+    return 0;
+}
