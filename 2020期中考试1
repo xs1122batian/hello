@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+ 
+int main()
+{
+    int a,b;
+    double c;
+    scanf("%d",&a);
+    b=10000-a;
+    c=(b/10000.0)*100;
+    printf("%.2f%%",c);
+    return 0;
+}
