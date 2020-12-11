@@ -1,0 +1,44 @@
+#include <stdio.h>
+ 
+int main(){
+int xx[ 5],a,b,c,d,sum1,sum2,sum3,sum4,max;
+max=0;
+for( a=0;a<5;a++)
+scanf( "%1d",&xx[ a]);
+for( b=0;b<5;b++)
+for( c=b+1;c<5;c++)
+if( xx[ c]>xx[ b])
+{ d=xx[ b];
+xx[ b]=xx[ c];
+xx[ c]=d;
+}
+d=xx[ 1];
+xx[ 1]=xx[ 3];
+xx[ 3]=d;
+d=xx[2];
+xx[2]=xx[4];
+xx[4]=d;
+sum1=(( xx[ 0]*100+xx[ 1]*10+xx[ 2])*( xx[ 3]*10+xx[ 4]));
+d=xx[1];
+xx[1]=xx[4];
+xx[4] = d;
+sum4 = ((xx[0] * 100 + xx[1] * 10 + xx[2]) * (xx[3] * 10 + xx[4]));
+d=xx[0];
+xx[0]=xx[3];
+xx[3]=d;
+sum2=(( xx[ 0]*100+xx[ 1]*10+xx[ 2])*( xx[ 3]*10+xx[ 4]));
+d=xx[1];
+xx[1]=xx[4];
+xx[4]=d;
+sum3=(( xx[ 0]*100+xx[ 1]*10+xx[ 2])*( xx[ 3]*10+xx[ 4]));
+if(sum1>max)
+max=sum1;
+if(sum2>max)
+max=sum2;
+if(sum3>max)
+max=sum3;
+if(sum4>max)
+max=sum4;
+printf("%d",max);
+return 0;
+}
