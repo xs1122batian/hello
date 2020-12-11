@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+  
+int main()
+{
+    int n,mc;
+    double a;
+    scanf("%d\n",&n);
+    scanf("%d",&mc);
+    a=n*0.2;
+    a=(int)(a+0.5);
+    if(mc<0||mc>n)
+        printf("Input Error\n");
+    else if(mc>0&&mc<=10)
+        printf("First Prize\n");
+    else if(mc>10&&mc<=30)
+        printf("Second Prize\n");
+    else if(mc>30&&mc<=a+30)
+        printf("Third Prize\n");
+    else if(mc>a+30&&mc<=n)
+        printf("No Prize\n");
+    return 0;
