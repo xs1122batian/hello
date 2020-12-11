@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+ 
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    if(a==2020)
+        printf("Farewell 2020\n");
+    else if(a==2021)
+        printf("Hello 2021\n");
+    else
+        printf("Forget it\n");
+    return 0;
+}
