@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+ 
+int main()
+{
+    int a,b,c,d,e,f,g,h,i;
+    d=0;
+    e=0;
+    h=0;
+    scanf("%d%d",&a,&b);
+    for(c=a;c<=b;c++)
+    {
+            i=c;
+ 
+            g=i%10;
+            d=d+g;
+            i=i/10;
+            h=i%10;
+            d=d+h*10;
+            i=i/10;
+ 
+        if(i==d)
+            e++;
+            d=0;
+            h=0;
+    }
+    printf("%d",e);
+    return 0;
+}
