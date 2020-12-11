@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+ 
+int main()
+{
+    int m,n,r,a,b,c;
+    scanf("%d %d %d",&m,&n,&r);
+    a=m/n;
+    b=m%n;
+    if(b==0)
+        c=a*r;
+    else
+        c=a*r+r;
+    printf("%d",c);
+    return 0;
+}
