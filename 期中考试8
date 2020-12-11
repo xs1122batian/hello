@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main( )
+{ 
+int a,b,c,d,e,n;
+scanf( "%1d",&a);
+scanf( "%8d",&b);
+scanf( "%8d",&c);
+scanf( "%8d",&d);
+scanf( "%7d\n",&e);
+scanf( "%d",&n);
+if( n==1)
+printf( "%d",a);
+if( n==2)
+printf( "%08d",b);
+if( n==3)
+printf( "%08d%08d%07d",c,d,e);
+return 0;
+}
