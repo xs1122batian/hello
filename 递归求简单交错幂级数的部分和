@@ -1,0 +1,27 @@
+#include<stdio.h>
+double fn( double x,int n)
+{
+    double a,b,c,d,e,f;
+    d=1;
+    c=1;
+    f=0;
+    for( a=1; a<=n; a++)
+    {
+        for( b=1; b<=a; b++)
+            c=c*x;
+        e=c*d;
+        f=f+e;
+        d=-d;
+        c=1;
+    }
+    return f;
+}
+int main( )
+{
+    double a,x;
+    int n;
+    scanf("%lf%d",&x,&n);
+    a=fn(x,n);
+    printf("%.2f",a);
+    return 0;
+}
