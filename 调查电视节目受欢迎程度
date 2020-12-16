@@ -1,0 +1,15 @@
+int main()
+{
+    int n,arr1[1000],arr2[1000]={0},a,b;
+    scanf("%d",&n);
+    for(a=0;a<n;a++)
+        scanf("%d",&arr1[a]);
+    for(a=0;a<n;a++)
+    {
+        b=arr1[a];
+        arr2[b]++;
+    }
+    for(a=1;a<=8;a++)
+        printf("%4d%4d\n",a,arr2[a]);
+    return 0;
+}
