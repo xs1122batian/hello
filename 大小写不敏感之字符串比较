@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include<ctype.h>
+int main()
+{
+    char arr1[150],arr2[150];
+    int a,b;
+    b=1;
+    scanf("%s%s",arr1,arr2);
+    for(a=0;arr1[a];a++)
+        arr1[a]=toupper(arr1[a]);
+    for(a=0;arr2[a];a++)
+        arr2[a]=toupper(arr2[a]);
+    for(a=0;arr1[a]||arr2[a];a++)
+        if(arr1[a]!=arr2[a])
+        {b=0;
+        break;}
+        if(b==1)
+            printf("EQUAL\n");
+        else
+            printf("NOT EQUAL\n");
+        return 0;
+}
