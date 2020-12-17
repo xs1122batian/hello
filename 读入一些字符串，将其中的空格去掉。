@@ -1,0 +1,20 @@
+#include<stdio.h>
+void fun(char *db)
+{
+    char *p=db;
+    int a,b=0;
+    for(a=0;db[a];a++)
+        {if(db[a]!=' ')
+            p[b++]=db[a];}
+        p[b]='\0';
+        db=p;
+}
+int main()
+{
+    int a,b;
+    char db[100];
+    while(gets(db)!=NULL)
+    {fun(db);
+  puts(db);}
+    return 0;
+}
