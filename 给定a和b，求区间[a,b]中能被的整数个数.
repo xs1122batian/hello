@@ -1,0 +1,7 @@
+#include<stdio.h>
+int main(){
+	int c=0,a,b;
+	scanf("%d %d",&a,&b);
+    c=b/63-(a-1)/63;
+	printf("%d",c);
+}
