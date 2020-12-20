@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+    int b,a,c,d,e;
+    char ch;
+    scanf("%d%d%c",&b,&a,&ch);
+    for(c==0;c<a;c++)
+    {
+        for(d=0;d<b;d++)
+        {
+            if(c==0||c==a-1)
+                printf("%c",ch);
+            if(c>0&&c<a-1)
+            {
+                printf("%c",ch);
+                for(e=2;e<b;e++)
+                    printf(" ");
+                printf("%c",ch);
+                break;
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}
