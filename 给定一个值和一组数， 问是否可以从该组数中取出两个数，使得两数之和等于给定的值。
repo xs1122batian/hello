@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main( )
+{
+int xs[20];
+int a,b,c,d,n,sum;
+GG:
+while(scanf( "%d%d",&sum,&n)!=EOF)
+{for(a=0;a<n;a++ )
+scanf( "%d",&xs[a]);
+d=0;
+for( b=0;b<n;b++)
+{ for( c=b+1;c<n;c++)
+{ if( (xs[b]+xs[c])==sum)
+{d=1;
+if(c>b)
+printf( "%d %d\n",b,c);
+else
+    printf("%d %d\n",c,b);
+goto GG;}}
+d++;
+if( d==n)
+{printf( "No Solution\n");
+goto GG;}}}
+return 0;
+}
