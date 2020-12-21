@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+    char db[200];
+    int a,b;
+    b=0;
+    gets(db);
+    if((db[0]=='_')||(db[0]>='a'&&db[0]<='z')||(db[0]>='A'&&db[0]<='Z'))
+    {   b=1;
+        for(a=1;db[a];a++)
+        if((db[a]=='_')||(db[a]>='a'&&db[a]<='z')||(db[a]>='A'&&db[a]<='Z')||(db[a]>='0'&&db[a]<='9'))
+            b=1;
+        else
+            {b=0;
+            break;}
+        }
+        else
+            b=0;
+        if(b==1)
+            printf("YES\n");
+        if(b==0)
+            printf("NO\n");
+        return 0;
+}
