@@ -1,0 +1,18 @@
+#include<stdio.h>
+void hn(int n, char a,char c,char b)
+{
+    if(n>0)
+    {
+        hn(n-1,a,b,c);
+        printf("%c-->%C\n",a,b);
+        hn(n-1,c,a,b);
+    }
+    return;
+}
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    hn(n,'a','c','b');
+    return 0;
+}
