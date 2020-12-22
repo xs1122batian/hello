@@ -1,0 +1,21 @@
+nt compute(int n, char ch)
+{
+    int a,b,c;
+    a=1;
+    if(ch=='+')
+    {a=0;
+        while(n)
+    {
+        a=a+n%10;
+        n=n/10;
+    }}
+    else if(ch=='*')
+        while(n)
+    {
+        a=a*(n%10);
+        n=n/10;
+    }
+    else
+        a=-1;
+    return a;
+}
