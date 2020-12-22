@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+    int n,a,b,c,t,max,min;
+    int DB[10000];
+    max=0;
+    min=0;
+    scanf("%d",&n);
+    for(a=0;a<n;a++)
+        scanf("%d",&DB[a]);
+    for(b=0;b<n;b++)
+    {
+        if(DB[b]>DB[max])
+            max=b;}
+    for(b=0;b<n;b++)
+        {if(DB[b]<DB[min])
+            min=b;}
+    t=DB[max];
+    DB[max]=DB[min];
+    DB[min]=t;
+    for(c=0;c<n;c++)
+        printf("%d ",DB[c]);
+    return 0;
+}
