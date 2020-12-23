@@ -1,0 +1,22 @@
+#include<stdio.h>
+void dg(int a)
+{
+    if(a>1)
+        dg(a/2);
+    printf("%d",a%2);
+    return ;
+}
+int main()
+{
+    int a;
+    while(scanf("%d",&a)!=EOF)
+        {   if(a>1)
+            {dg(a);
+            printf("\n");}
+            else if(a==0)
+                printf("0\n");
+            else if(a==1)
+                printf("1\n");
+            }
+    return 0;
+}
