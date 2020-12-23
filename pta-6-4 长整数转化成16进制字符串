@@ -1,0 +1,73 @@
+#include <stdio.h>
+#define MAXN 10
+
+void f( long int x, char *p );
+
+int main()
+{
+    long int x;
+    char s[MAXN] = "";
+
+    scanf("%ld", &x);
+    f(x, s);
+    printf("%s\n", s);
+
+    return 0;
+}
+
+#include<string.h>
+void f( long int x, char *p )
+{
+    int a,b,d,e;
+    e=0;
+    d=0;
+    char c;
+    if(x==0)
+    {
+        p[e]='0';
+        e++;
+        p[e]='\0';
+        return;
+    }
+    if(x<0)
+    {
+        x=-x;
+        p[e]='-';
+        e++;
+    }
+    if(x>0)
+        while(x)
+        {
+            a=x%16;
+            x=x/16;
+            if(a<=9)
+            {
+                p[e]=a+'0';
+                e++;
+            }
+            else
+            {
+                p[e]=(a-10)+'A';
+                e++;
+            }
+        }
+    p[e]='\0';
+    if(p[0]!='-')
+        for(a=strlen(p)-1; a>=strlen(p)/2; a--,d++)
+        {
+            {
+                c=p[a];
+                p[a]=p[d];
+                p[d]=c;
+            }
+        }
+    else
+        for(a=strlen(p)-1; a>strlen(p)/2; a--,d++)
+        {
+
+                c=p[a];
+                p[a]=p[d+1];
+                p[d+1]=c;
+
+        }
+}
