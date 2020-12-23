@@ -1,0 +1,26 @@
+#include <stdio.h>
+# include <string.h>
+# define MAXLINE 80
+void encrypt ( char *s);
+int main (void)
+{
+   char line [MAXLINE];
+
+   gets(line);
+   encrypt (line);
+   printf ("%s\n", line);
+     return 0;
+}
+
+
+/* 请在这里填写答案 */
+void encrypt ( char *s)
+{
+    int a;
+    for(a=0;s[a];a++)
+        if(s[a]=='z')
+        s[a]='a';
+    else
+        s[a]=s[a]+1;
+    return;
+}
