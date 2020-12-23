@@ -1,0 +1,47 @@
+#include <stdio.h>
+#define MAXS 30
+
+char *search(char *s, char *t);
+void ReadString( char s[] ); /* 裁判提供，细节不表 */
+
+int main()
+{
+    char s[MAXS], t[MAXS], *pos;
+
+    ReadString(s);
+    ReadString(t);
+    pos = search(s, t);
+    if ( pos != NULL )
+        printf("%d\n", pos - s);
+    else
+        printf("-1\n");
+
+    return 0;
+}
+
+/* 你的代码将被嵌在这里 */
+char *search( char *s, char *t )
+{   int a,b,c,d,e;
+    d=0;
+    for(a=0; s[a]; a++)
+    {   if(s[a]==t[0])
+        {   d=1;
+            b=0;
+            c=a;
+            e=&s[a];
+            while(t[b])
+            {   if(s[c]!=t[b])
+                    {d=0;
+                    break;}
+                c++;
+                b++;
+            }
+        }
+        if(d==1)
+            break;
+    }
+    if(d==1)
+         return e;
+    else
+      return NULL;
+}
