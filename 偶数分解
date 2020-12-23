@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<math.h>
+int prime(int n)
+{
+    int a,b,c;
+    c=1;
+    for(a=2; a<=sqrt(n); a++)
+    {
+        b=n%a;
+        if(b==0||n==1)
+        {
+            c=0;
+            break;
+        }
+    }
+        return c;
+}
+int main()
+{
+    int a,c,n;
+    for(n=4; n<=100; n=n+2)
+    {
+        for(a=2; a<n; a++)
+        {
+            c=n-a;
+            if(prime(a)&&prime(c))
+            {
+                printf("%d=%d+%d\n",n,a,c);
+                break;
+            }
+        }
+    }
+    return 0;
+}
+//test:
+/*int main()
+{
+    int a,n;
+    scanf("%d",&n);
+    a=prime(n);
+    printf("%d",a);
+    return 0;
+}*/
+
