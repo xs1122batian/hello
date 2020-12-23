@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main()
+{
+    long long int a,b,c,d,n,e,m;
+    gg:
+    while(scanf("%lld",&n)!=EOF)
+    {
+        c=1;
+        for(d=1;;d++)
+        {
+           m=n*d;
+           e=m;
+           while(m)
+           {
+              a=m%10;
+              m=m/10;
+              if(a>=2)
+                c=0;
+           }
+           if(c!=0)
+           {printf("%lld\n",e);
+           goto gg;}
+           c=1;
+        }
+    }
+    return 0;
+}
+
